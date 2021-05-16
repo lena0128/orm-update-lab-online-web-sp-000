@@ -54,10 +54,10 @@ class Student
  end
 end
 
-def self.create(name:, grade:)
-    s = Student.new(name, grade)
-    s.save
-    s
+def self.create(name, grade)
+    student = Student.new(name, grade)
+    student.save
+    student
   end
 
 def self.find_by_name(name)
