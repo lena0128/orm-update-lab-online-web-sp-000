@@ -41,13 +41,13 @@ class Student
   DB[:conn].execute(sql, self.name, self.grade)
   @id = DB[:conn].execute("SELECT last_insertrowid() FROM students")[0][0]
 
-  if self.id 
+  if self.id
     self.update
   else
     sql = <<-SQL
      INSERT INTO students(name, grade)
      VALUE(?, ?)
-    SQL  
+    SQL
 
     DB[:conn].execute(sql, self.name, self.grade)
  end
