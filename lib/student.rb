@@ -69,4 +69,10 @@ def self.find_by_name(name)
 def self.new_from_db(row)
 end
 
+
+def update
+    sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
+    DB[:conn].execute(sql, self.name, self.grade, self.id)
+  end
+
 end
