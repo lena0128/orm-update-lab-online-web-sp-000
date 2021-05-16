@@ -20,6 +20,6 @@ class Student
         grade INTEGER
       )
     SQL
-  end  
+  end
 
 end
